@@ -11,25 +11,52 @@
 
 <body>
 
+
     <div class="box">
 
-        <div class="figurine1">
-            <img class="pocahontas" src="poca.png" alt="" width="100" height="200">
+        <div id="pocahontas">
+            <h4>Pocahontas</h4>
+            <img src="poca.png" alt="" width="100" height="200">
+
+
         </div>
 
-        <div class="figurine2">
-            <img class="john" src="smithjohn.png" alt="" width="100" height="200">
-        </div>
+        <div id="john">
+            <h4>John</h4>
+            <img src="smithjohn.png" alt="" width="100" height="200">
 
+        </div>
 
     </div>
 
     <div class="fond">
-        <button id="attack" onClick="fight(id)">Attack</button>
-        <button id="counter" onClick="fight(id)">Counter</button>
-        <button id="calins" onClick="fight(id)">Calins</button>
-        <button id="bisous" onClick="fight(id)">Bisous</button>
+        <button id="attack">Attack</button>
+
+        <button id="embrouille">Embrouille</button>
+
+        <button id="bisous">Bisous</button>
+
     </div>
+    <section class="players">
+        <div class="PocaStats">
+            <ul>
+                <li>Amour: <span class="amour"></span></li>
+                <li>Bonheur: <span class="bonheur"></span></li>
+                <li>Coeur: <span class="coeur"></span></li>
+                <li>Sante: <span class="sante"></span></li>
+            </ul>
+        </div>
+
+        <div class="JohnStats">
+            <ul>
+                <li>Amour: <span class="amour"></span></li>
+                <li>Bonheur: <span class="bonheur"></span></li>
+                <li>Coeur: <span class="coeur"></span></li>
+                <li>Sante: <span class="sante"></span></li>
+            </ul>
+        </div>
+    </section>
+    <script src="index.js"></script>
 </body>
 
 </html>
