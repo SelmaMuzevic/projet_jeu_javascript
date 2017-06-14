@@ -1,6 +1,7 @@
 .box {
     display: flex;
     justify-content: space-around;
+    padding-bottom: 30px;
 }
 
 body {
@@ -9,12 +10,13 @@ body {
     justify-content: space-between;
     background: url("http://www.blanchisserie-pressing.fr/images/fond-1.jpg");
     background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     background-size: 100%;
     min-height: 100vh;
-    margin: 0;
 }
 
-.fond {
+#click {
     display: flex;
     justify-content: space-between;
 }
@@ -24,14 +26,33 @@ button {
     border-radius: 5px;
 }
 
-#pocahontas {
-    margin-top: 10em;
-    margin-left: -1em;
+button:hover,
+button:active {
+    font-size: 100%;
+    background-color: grey;
 }
 
-#john {
-    margin-top: 10em;
+#monstre {
+    margin-top: 3em;
+    margin-left: -1em;
+    position: relative;
+    animation-name: pocaAnim;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 3;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+#trider {
+    margin-top: 3em;
     margin-right: -1em;
+    position: relative;
+    animation-name: johnAnim;
+    animation-duration: 7s;
+    animation-iteration-count: 2;
 }
 
 * {
@@ -55,11 +76,11 @@ button {
     justify-content: space-between;
 }
 
-.PocaStats {
+.MonstreStats {
     background-color: greenyellow;
 }
 
-.JohnStats {
+.TombriderStats {
     background-color: greenyellow;
 }
 
