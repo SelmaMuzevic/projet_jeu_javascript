@@ -29,7 +29,7 @@ button {
 button:hover,
 button:active {
     font-size: 100%;
-    background-color: grey;
+    background-color: turquoise;
 }
 
 #monstre {
