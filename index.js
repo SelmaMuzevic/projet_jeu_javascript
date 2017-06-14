@@ -22,29 +22,29 @@
  });
 
  document.body.querySelector("#crier").addEventListener("click", function(e) {
-
+     crier();
      affichage();
      gameOver();
  });
  document.body.querySelector("#frapper").addEventListener("click", function(e) {
-
+     frapper();
      affichage();
      gameOver();
  });
 
  document.body.querySelector("#attack2").addEventListener("click", function(e) {
-     attack();
+     attack2();
      affichage();
      gameOver();
  });
 
  document.body.querySelector("#arrow").addEventListener("click", function(e) {
-
+     arrow();
      affichage();
      gameOver();
  });
  document.body.querySelector("#gun").addEventListener("click", function(e) {
-
+     gun();
      affichage();
      gameOver();
  });
@@ -53,13 +53,13 @@
 
  function gameOver() {
      if (tombrider.sante <= 0) {
-         alert("GAME OVER !");
+         alert("GAME OVER, THE WINNER IS: MONSTRE !");
+
      }
-     if (monstre.sante <= 0) {
-         alert("GAME OVER !");
+     if (monstre.vies <= 0) {
+         alert("GAME OVER, THE WINNER IS: TOMBRIDER !");
      }
  }
-
 
  function affichage() {
      document.querySelector(".MonstreStats .energie").textContent = monstre.energie;
@@ -81,7 +81,6 @@
      tombrider.sante -= 50;
  }
 
-
  function attack2() {
 
      monstre.energie -= 20;
@@ -89,4 +88,32 @@
      monstre.coeur -= 25;
      monstre.sante -= 50;
 
+ }
+
+ function crier() {
+     tombrider.energie -= 15;
+     tombrider.vies -= 10;
+     tombrider.coeur -= 5;
+     tombrider.sante -= 10;
+ }
+
+ function frapper() {
+     tombrider.energie -= 20;
+     tombrider.vies -= 10;
+     tombrider.coeur -= 5;
+     tombrider.sante -= 10;
+ }
+
+ function arrow() {
+     monstre.energie -= 25;
+     monstre.vies -= 20;
+     monstre.coeur -= 15;
+     monstre.sante -= 40;
+ }
+
+ function gun() {
+     monstre.energie -= 20;
+     monstre.vies -= 5;
+     monstre.coeur -= 25;
+     monstre.sante -= 30;
  }
