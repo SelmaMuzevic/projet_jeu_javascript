@@ -32,25 +32,21 @@ button:active {
     background-color: turquoise;
 }
 
-#monstre {
+#perso1 {
     margin-top: 3em;
     margin-left: -1em;
     position: relative;
-    animation-name: pocaAnim;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-    animation-delay: 0;
-    animation-direction: alternate;
-    animation-iteration-count: 3;
-    animation-fill-mode: none;
-    animation-play-state: running;
+    animation: asterix 2s steps(1);
+    background: url(asterix-sprite.png);
+    background-size: 2000%;
+    background-position: -100px 0px;
+    height: 200px;
 }
 
 #trider {
     margin-top: 3em;
     margin-right: -1em;
     position: relative;
-    animation-name: johnAnim;
     animation-duration: 7s;
     animation-iteration-count: 2;
 }
@@ -76,7 +72,7 @@ button {
     justify-content: space-between;
 }
 
-.MonstreStats {
+.perso1Stats {
     background-color: greenyellow;
 }
 
@@ -88,4 +84,22 @@ ul {
     padding: 15px;
     margin: 0;
     list-style: none;
+}
+
+@keyframes asterix {
+    0% {
+        background-position: -100px 0px;
+    }
+    25% {
+        background-position: -180px 300px;
+    }
+    50% {
+        background-position: -260px 0px;
+    }
+    75% {
+        background-position: -340px 200px;
+    }
+    100% {
+        background-position: -340px 0px;
+    }
 }

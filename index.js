@@ -1,6 +1,6 @@
  "use strict";
 
- let monstre = {
+ let perso1 = {
      energie: 200,
      vies: 100,
      coeur: 50,
@@ -38,8 +38,8 @@
      gameOver();
  });
 
- document.body.querySelector("#arrow").addEventListener("click", function(e) {
-     arrow();
+ document.body.querySelector("#kick").addEventListener("click", function(e) {
+     kick();
      affichage();
      gameOver();
  });
@@ -53,19 +53,19 @@
 
  function gameOver() {
      if (tombrider.sante <= 0) {
-         alert("GAME OVER, THE WINNER IS: MONSTRE !");
+         alert("GAME OVER, THE WINNER IS: ASTERIX !");
 
      }
-     if (monstre.vies <= 0) {
+     if (perso1.vies <= 0) {
          alert("GAME OVER, THE WINNER IS: TOMBRIDER !");
      }
  }
 
  function affichage() {
-     document.querySelector(".MonstreStats .energie").textContent = monstre.energie;
-     document.querySelector(".MonstreStats .vies").textContent = monstre.vies;
-     document.querySelector(".MonstreStats .coeur").textContent = monstre.coeur;
-     document.querySelector(".MonstreStats .sante").textContent = monstre.sante;
+     document.querySelector(".perso1Stats .energie").textContent = perso1.energie;
+     document.querySelector(".perso1Stats .vies").textContent = perso1.vies;
+     document.querySelector(".perso1Stats .coeur").textContent = perso1.coeur;
+     document.querySelector(".perso1Stats .sante").textContent = perso1.sante;
 
      document.querySelector(".TombriderStats .energie").textContent = tombrider.energie;
      document.querySelector(".TombriderStats .vies").textContent = tombrider.vies;
@@ -83,10 +83,10 @@
 
  function attack2() {
 
-     monstre.energie -= 20;
-     monstre.vies -= 50;
-     monstre.coeur -= 25;
-     monstre.sante -= 50;
+     perso1.energie -= 20;
+     perso1.vies -= 50;
+     perso1.coeur -= 25;
+     perso1.sante -= 50;
 
  }
 
@@ -104,16 +104,16 @@
      tombrider.sante -= 10;
  }
 
- function arrow() {
-     monstre.energie -= 25;
-     monstre.vies -= 20;
-     monstre.coeur -= 15;
-     monstre.sante -= 40;
+ function kick() {
+     perso1.energie -= 25;
+     perso1.vies -= 20;
+     perso1.coeur -= 15;
+     perso1.sante -= 40;
  }
 
  function gun() {
-     monstre.energie -= 20;
-     monstre.vies -= 5;
-     monstre.coeur -= 25;
-     monstre.sante -= 30;
+     perso1.energie -= 20;
+     perso1.vies -= 5;
+     perso1.coeur -= 25;
+     perso1.sante -= 30;
  }
